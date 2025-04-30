@@ -42,6 +42,8 @@
     ]
   },
   "lint-staged": {
-    "*": "pnpm lint"
+    "*.{js,ts,vue,json,css,scss,md}": "pnpm lint:fix",
+    "!.github/**/*": "pnpm lint:fix",
+    "!.husky/**/*": "pnpm lint:fix"
   }
 }
