@@ -22,8 +22,26 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
+    "@antfu/eslint-config": "^4.10.1",
+    "@iconify-json/tabler": "^1.2.17",
+    "@types/slug": "^5.0.9",
+    "daisyui": "^5.0.6",
+    "drizzle-kit": "^0.30.5",
     "eslint-plugin-format": "^1.0.1",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "vue-tsc": "^2.2.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "@vercel/nft": "^0.27.4"
+    },
+    "onlyBuiltDependencies": [
+      "@sentry/cli",
+      "vue-demi"
+    ]
+  },
+  "lint-staged": {
+    "*": "pnpm lint"
   }
 }
