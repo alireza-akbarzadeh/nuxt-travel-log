@@ -4,6 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+onlyBuiltDependencies:
+  - '@sentry/cli'
+  - vue-demi
+
+overrides:
+  '@vercel/nft': ^0.27.4
+
 dependencies:
   '@nuxt/eslint':
     specifier: 1.3.0
@@ -483,7 +490,6 @@ packages:
 
   /@emnapi/core@1.4.3:
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
-    requiresBuild: true
     dependencies:
       '@emnapi/wasi-threads': 1.0.2
       tslib: 2.8.1
@@ -491,14 +497,12 @@ packages:
 
   /@emnapi/runtime@1.4.3:
     resolution: {integrity: sha512-pBPWdu6MLKROBX05wSNKcNb++m5Er+KQ9QkB+WVM+pW2Kx9hoSrVTnu3BdkI5eBLZoKu/J6mW/B6i6bJB2ytXQ==}
-    requiresBuild: true
     dependencies:
       tslib: 2.8.1
     optional: true
 
   /@emnapi/wasi-threads@1.0.2:
     resolution: {integrity: sha512-5n3nTJblwRi8LlXkJ9eBzu+kZR8Yxcc7ubakyQTFzPMtIhFpUBRbsnc2Dv88IZDIbCDlBiWrknhB4Lsz7mg6BA==}
-    requiresBuild: true
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -544,7 +548,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [aix]
-    requiresBuild: true
     optional: true
 
   /@esbuild/aix-ppc64@0.25.3:
@@ -552,7 +555,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [ppc64]
     os: [aix]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -561,7 +563,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [android]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -570,7 +571,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [android]
-    requiresBuild: true
     optional: true
 
   /@esbuild/android-arm64@0.25.3:
@@ -578,7 +578,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -587,7 +586,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm]
     os: [android]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -596,7 +594,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm]
     os: [android]
-    requiresBuild: true
     optional: true
 
   /@esbuild/android-arm@0.25.3:
@@ -604,7 +601,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -613,7 +609,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [android]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -622,7 +617,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [android]
-    requiresBuild: true
     optional: true
 
   /@esbuild/android-x64@0.25.3:
@@ -630,7 +624,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -639,7 +632,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -648,7 +640,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     optional: true
 
   /@esbuild/darwin-arm64@0.25.3:
@@ -656,7 +647,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -665,7 +655,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -674,7 +663,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     optional: true
 
   /@esbuild/darwin-x64@0.25.3:
@@ -682,7 +670,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -691,7 +678,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [freebsd]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -700,7 +686,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [freebsd]
-    requiresBuild: true
     optional: true
 
   /@esbuild/freebsd-arm64@0.25.3:
@@ -708,7 +693,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [freebsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -717,7 +701,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -726,7 +709,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     optional: true
 
   /@esbuild/freebsd-x64@0.25.3:
@@ -734,7 +716,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -743,7 +724,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -752,7 +732,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-arm64@0.25.3:
@@ -760,7 +739,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -769,7 +747,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -778,7 +755,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-arm@0.25.3:
@@ -786,7 +762,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -795,7 +770,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -804,7 +778,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-ia32@0.25.3:
@@ -812,7 +785,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [ia32]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -821,7 +793,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -830,7 +801,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-loong64@0.25.3:
@@ -838,7 +808,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [loong64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -847,7 +816,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [mips64el]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -856,7 +824,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [mips64el]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-mips64el@0.25.3:
@@ -864,7 +831,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [mips64el]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -873,7 +839,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -882,7 +847,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-ppc64@0.25.3:
@@ -890,7 +854,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [ppc64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -899,7 +862,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -908,7 +870,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-riscv64@0.25.3:
@@ -916,7 +877,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -925,7 +885,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [s390x]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -934,7 +893,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [s390x]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-s390x@0.25.3:
@@ -942,7 +900,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [s390x]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -951,7 +908,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -960,7 +916,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@esbuild/linux-x64@0.25.3:
@@ -968,7 +923,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -977,7 +931,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [netbsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -986,7 +939,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [netbsd]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -995,7 +947,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [netbsd]
-    requiresBuild: true
     optional: true
 
   /@esbuild/netbsd-x64@0.25.3:
@@ -1003,7 +954,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [netbsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1012,7 +962,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [openbsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1021,7 +970,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -1030,7 +978,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
-    requiresBuild: true
     optional: true
 
   /@esbuild/openbsd-x64@0.25.3:
@@ -1038,7 +985,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [openbsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1047,7 +993,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [sunos]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -1056,7 +1001,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [sunos]
-    requiresBuild: true
     optional: true
 
   /@esbuild/sunos-x64@0.25.3:
@@ -1064,7 +1008,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [sunos]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1073,7 +1016,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -1082,7 +1024,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@esbuild/win32-arm64@0.25.3:
@@ -1090,7 +1031,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1099,7 +1039,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -1108,7 +1047,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@esbuild/win32-ia32@0.25.3:
@@ -1116,7 +1054,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1125,7 +1062,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: true
     optional: true
 
@@ -1134,7 +1070,6 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@esbuild/win32-x64@0.25.3:
@@ -1142,7 +1077,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1335,13 +1269,6 @@ packages:
       wrap-ansi-cjs: /wrap-ansi@7.0.0
     dev: false
 
-  /@isaacs/fs-minipass@4.0.1:
-    resolution: {integrity: sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w==}
-    engines: {node: '>=18.0.0'}
-    dependencies:
-      minipass: 7.1.2
-    dev: false
-
   /@jridgewell/gen-mapping@0.3.8:
     resolution: {integrity: sha512-imAbBGkb+ebQyxKgzv5Hu2nmROxoDOXHh80evxdoXNOrvAnVx7zimzc1Oo5h9RlfV4vPXaE2iM5pOFbvOCClWA==}
     engines: {node: '>=6.0.0'}
@@ -1412,26 +1339,8 @@ packages:
       - supports-color
     dev: false
 
-  /@mapbox/node-pre-gyp@2.0.0:
-    resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
-    engines: {node: '>=18'}
-    hasBin: true
-    dependencies:
-      consola: 3.4.2
-      detect-libc: 2.0.4
-      https-proxy-agent: 7.0.6
-      node-fetch: 2.7.0
-      nopt: 8.1.0
-      semver: 7.7.1
-      tar: 7.4.3
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: false
-
   /@napi-rs/wasm-runtime@0.2.9:
     resolution: {integrity: sha512-OKRBiajrrxB9ATokgEQoG87Z25c67pCpYcCwmXYX8PBftC9pBfN18gnm/fh1wurSLEKIAt+QRFLFCQISrb66Jg==}
-    requiresBuild: true
     dependencies:
       '@emnapi/core': 1.4.3
       '@emnapi/runtime': 1.4.3
@@ -1922,7 +1831,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1931,7 +1839,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1940,7 +1847,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1949,7 +1855,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1958,7 +1863,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1967,7 +1871,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1976,7 +1879,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -1984,7 +1886,6 @@ packages:
     resolution: {integrity: sha512-jAugJhwJvCSurHEoicL0Gp9k1XVEnrTpQ3l1YBro/jfJ5uKSpfMBPPpNZBW04gumD08RDk32nqcPbk+BezvTaw==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
-    requiresBuild: true
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.9
     dev: false
@@ -1995,7 +1896,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2004,7 +1904,6 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2017,7 +1916,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2026,7 +1924,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2035,7 +1932,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2044,7 +1940,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2053,7 +1948,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2062,7 +1956,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2071,7 +1964,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2080,7 +1972,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2089,7 +1980,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2098,7 +1988,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2118,7 +2007,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2127,7 +2015,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2136,14 +2023,12 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
   /@parcel/watcher@2.5.1:
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
-    requiresBuild: true
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
@@ -2172,7 +2057,6 @@ packages:
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2333,7 +2217,6 @@ packages:
     resolution: {integrity: sha512-kxz0YeeCrRUHz3zyqvd7n+TVRlNyTifBsmnmNPtk3hQURUyG9eAB+usz6DAwagMusjx/zb3AjvDUvhFGDAexGw==}
     cpu: [arm]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2341,7 +2224,6 @@ packages:
     resolution: {integrity: sha512-PPkxTOisoNC6TpnDKatjKkjRMsdaWIhyuMkA4UsBXT9WEZY4uHezBTjs6Vl4PbqQQeu6oION1w2voYZv9yquCw==}
     cpu: [arm64]
     os: [android]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2349,7 +2231,6 @@ packages:
     resolution: {integrity: sha512-VWXGISWFY18v/0JyNUy4A46KCFCb9NVsH+1100XP31lud+TzlezBbz24CYzbnA4x6w4hx+NYCXDfnvDVO6lcAA==}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2357,7 +2238,6 @@ packages:
     resolution: {integrity: sha512-nIwkXafAI1/QCS7pxSpv/ZtFW6TXcNUEHAIA9EIyw5OzxJZQ1YDrX+CL6JAIQgZ33CInl1R6mHet9Y/UZTg2Bw==}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2365,7 +2245,6 @@ packages:
     resolution: {integrity: sha512-BdrLJ2mHTrIYdaS2I99mriyJfGGenSaP+UwGi1kB9BLOCu9SR8ZpbkmmalKIALnRw24kM7qCN0IOm6L0S44iWw==}
     cpu: [arm64]
     os: [freebsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2373,7 +2252,6 @@ packages:
     resolution: {integrity: sha512-VXeo/puqvCG8JBPNZXZf5Dqq7BzElNJzHRRw3vjBE27WujdzuOPecDPc/+1DcdcTptNBep3861jNq0mYkT8Z6Q==}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2381,7 +2259,6 @@ packages:
     resolution: {integrity: sha512-ehSKrewwsESPt1TgSE/na9nIhWCosfGSFqv7vwEtjyAqZcvbGIg4JAcV7ZEh2tfj/IlfBeZjgOXm35iOOjadcg==}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2389,7 +2266,6 @@ packages:
     resolution: {integrity: sha512-m39iO/aaurh5FVIu/F4/Zsl8xppd76S4qoID8E+dSRQvTyZTOI2gVk3T4oqzfq1PtcvOfAVlwLMK3KRQMaR8lg==}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2397,7 +2273,6 @@ packages:
     resolution: {integrity: sha512-Y+GHnGaku4aVLSgrT0uWe2o2Rq8te9hi+MwqGF9r9ORgXhmHK5Q71N757u0F8yU1OIwUIFy6YiJtKjtyktk5hg==}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2405,7 +2280,6 @@ packages:
     resolution: {integrity: sha512-jEwjn3jCA+tQGswK3aEWcD09/7M5wGwc6+flhva7dsQNRZZTe30vkalgIzV4tjkopsTS9Jd7Y1Bsj6a4lzz8gQ==}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2413,7 +2287,6 @@ packages:
     resolution: {integrity: sha512-ySyWikVhNzv+BV/IDCsrraOAZ3UaC8SZB67FZlqVwXwnFhPihOso9rPOxzZbjp81suB1O2Topw+6Ug3JNegejQ==}
     cpu: [loong64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2421,7 +2294,6 @@ packages:
     resolution: {integrity: sha512-BvvA64QxZlh7WZWqDPPdt0GH4bznuL6uOO1pmgPnnv86rpUpc8ZxgZwcEgXvo02GRIZX1hQ0j0pAnhwkhwPqWg==}
     cpu: [ppc64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2429,7 +2301,6 @@ packages:
     resolution: {integrity: sha512-EQSP+8+1VuSulm9RKSMKitTav89fKbHymTf25n5+Yr6gAPZxYWpj3DzAsQqoaHAk9YX2lwEyAf9S4W8F4l3VBQ==}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2437,7 +2308,6 @@ packages:
     resolution: {integrity: sha512-n/vQ4xRZXKuIpqukkMXZt9RWdl+2zgGNx7Uda8NtmLJ06NL8jiHxUawbwC+hdSq1rrw/9CghCpEONor+l1e2gA==}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2445,7 +2315,6 @@ packages:
     resolution: {integrity: sha512-h8d28xzYb98fMQKUz0w2fMc1XuGzLLjdyxVIbhbil4ELfk5/orZlSTpF/xdI9C8K0I8lCkq+1En2RJsawZekkg==}
     cpu: [s390x]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2453,7 +2322,6 @@ packages:
     resolution: {integrity: sha512-XiK5z70PEFEFqcNj3/zRSz/qX4bp4QIraTy9QjwJAb/Z8GM7kVUsD0Uk8maIPeTyPCP03ChdI+VVmJriKYbRHQ==}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2461,7 +2329,6 @@ packages:
     resolution: {integrity: sha512-2BRORitq5rQ4Da9blVovzNCMaUlyKrzMSvkVR0D4qPuOy/+pMCrh1d7o01RATwVy+6Fa1WBw+da7QPeLWU/1mQ==}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2469,7 +2336,6 @@ packages:
     resolution: {integrity: sha512-b2bcNm9Kbde03H+q+Jjw9tSfhYkzrDUf2d5MAd1bOJuVplXvFhWz7tRtWvD8/ORZi7qSCy0idW6tf2HgxSXQSg==}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2477,7 +2343,6 @@ packages:
     resolution: {integrity: sha512-DfcogW8N7Zg7llVEfpqWMZcaErKfsj9VvmfSyRjCyo4BI3wPEfrzTtJkZG6gKP/Z92wFm6rz2aDO7/JfiR/whA==}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2485,7 +2350,6 @@ packages:
     resolution: {integrity: sha512-ECyOuDeH3C1I8jH2MK1RtBJW+YPMvSfT0a5NN0nHfQYnDSJ6tUiZH3gzwVP5/Kfh/+Tt7tpWVF9LXNTnhTJ3kA==}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -2526,7 +2390,6 @@ packages:
 
   /@tybys/wasm-util@0.9.0:
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
-    requiresBuild: true
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -2562,7 +2425,6 @@ packages:
 
   /@types/node@22.15.3:
     resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
-    requiresBuild: true
     dependencies:
       undici-types: 6.21.0
     dev: false
@@ -2593,7 +2455,6 @@ packages:
 
   /@types/yauzl@2.10.3:
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
-    requiresBuild: true
     dependencies:
       '@types/node': 22.15.3
     dev: false
@@ -2755,98 +2616,84 @@ packages:
     resolution: {integrity: sha512-vxtBno4xvowwNmO/ASL0Y45TpHqmNkAaDtz4Jqb+clmcVSSl8XCG/PNFFkGsXXXS6AMjP+ja/TtNCFFa1QwLRg==}
     cpu: [arm64]
     os: [darwin]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-darwin-x64@1.7.2:
     resolution: {integrity: sha512-qhVa8ozu92C23Hsmv0BF4+5Dyyd5STT1FolV4whNgbY6mj3kA0qsrGPe35zNR3wAN7eFict3s4Rc2dDTPBTuFQ==}
     cpu: [x64]
     os: [darwin]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-freebsd-x64@1.7.2:
     resolution: {integrity: sha512-zKKdm2uMXqLFX6Ac7K5ElnnG5VIXbDlFWzg4WJ8CGUedJryM5A3cTgHuGMw1+P5ziV8CRhnSEgOnurTI4vpHpg==}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-arm-gnueabihf@1.7.2:
     resolution: {integrity: sha512-8N1z1TbPnHH+iDS/42GJ0bMPLiGK+cUqOhNbMKtWJ4oFGzqSJk/zoXFzcQkgtI63qMcUI7wW1tq2usZQSb2jxw==}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-arm-musleabihf@1.7.2:
     resolution: {integrity: sha512-tjYzI9LcAXR9MYd9rO45m1s0B/6bJNuZ6jeOxo1pq1K6OBuRMMmfyvJYval3s9FPPGmrldYA3mi4gWDlWuTFGA==}
     cpu: [arm]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-arm64-gnu@1.7.2:
     resolution: {integrity: sha512-jon9M7DKRLGZ9VYSkFMflvNqu9hDtOCEnO2QAryFWgT6o6AXU8du56V7YqnaLKr6rAbZBWYsYpikF226v423QA==}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-arm64-musl@1.7.2:
     resolution: {integrity: sha512-c8Cg4/h+kQ63pL43wBNaVMmOjXI/X62wQmru51qjfTvI7kmCy5uHTJvK/9LrF0G8Jdx8r34d019P1DVJmhXQpA==}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-ppc64-gnu@1.7.2:
     resolution: {integrity: sha512-A+lcwRFyrjeJmv3JJvhz5NbcCkLQL6Mk16kHTNm6/aGNc4FwPHPE4DR9DwuCvCnVHvF5IAd9U4VIs/VvVir5lg==}
     cpu: [ppc64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-riscv64-gnu@1.7.2:
     resolution: {integrity: sha512-hQQ4TJQrSQW8JlPm7tRpXN8OCNP9ez7PajJNjRD1ZTHQAy685OYqPrKjfaMw/8LiHCt8AZ74rfUVHP9vn0N69Q==}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-riscv64-musl@1.7.2:
     resolution: {integrity: sha512-NoAGbiqrxtY8kVooZ24i70CjLDlUFI7nDj3I9y54U94p+3kPxwd2L692YsdLa+cqQ0VoqMWoehDFp21PKRUoIQ==}
     cpu: [riscv64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-s390x-gnu@1.7.2:
     resolution: {integrity: sha512-KaZByo8xuQZbUhhreBTW+yUnOIHUsv04P8lKjQ5otiGoSJ17ISGYArc+4vKdLEpGaLbemGzr4ZeUbYQQsLWFjA==}
     cpu: [s390x]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-x64-gnu@1.7.2:
     resolution: {integrity: sha512-dEidzJDubxxhUCBJ/SHSMJD/9q7JkyfBMT77Px1npl4xpg9t0POLvnWywSk66BgZS/b2Hy9Y1yFaoMTFJUe9yg==}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-linux-x64-musl@1.7.2:
     resolution: {integrity: sha512-RvP+Ux3wDjmnZDT4XWFfNBRVG0fMsc+yVzNFUqOflnDfZ9OYujv6nkh+GOr+watwrW4wdp6ASfG/e7bkDradsw==}
     cpu: [x64]
     os: [linux]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-wasm32-wasi@1.7.2:
     resolution: {integrity: sha512-y797JBmO9IsvXVRCKDXOxjyAE4+CcZpla2GSoBQ33TVb3ILXuFnMrbR/QQZoauBYeOFuu4w3ifWLw52sdHGz6g==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
-    requiresBuild: true
     dependencies:
       '@napi-rs/wasm-runtime': 0.2.9
     optional: true
@@ -2855,21 +2702,18 @@ packages:
     resolution: {integrity: sha512-gtYTh4/VREVSLA+gHrfbWxaMO/00y+34htY7XpioBTy56YN2eBjkPrY1ML1Zys89X3RJDKVaogzwxlM1qU7egg==}
     cpu: [arm64]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-win32-ia32-msvc@1.7.2:
     resolution: {integrity: sha512-Ywv20XHvHTDRQs12jd3MY8X5C8KLjDbg/jyaal/QLKx3fAShhJyD4blEANInsjxW3P7isHx1Blt56iUDDJO3jg==}
     cpu: [ia32]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@unrs/resolver-binding-win32-x64-msvc@1.7.2:
     resolution: {integrity: sha512-friS8NEQfHaDbkThxopGk+LuE5v3iY0StruifjQEt7SLbA46OnfgMO15sOTkbpJkol6RB+1l1TYPXh0sCddpvA==}
     cpu: [x64]
     os: [win32]
-    requiresBuild: true
     optional: true
 
   /@vercel/nft@0.27.7(rollup@4.40.1):
@@ -2888,29 +2732,6 @@ packages:
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       node-gyp-build: 4.8.4
-      resolve-from: 5.0.0
-    transitivePeerDependencies:
-      - encoding
-      - rollup
-      - supports-color
-    dev: false
-
-  /@vercel/nft@0.29.2(rollup@4.40.1):
-    resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
-    engines: {node: '>=18'}
-    hasBin: true
-    dependencies:
-      '@mapbox/node-pre-gyp': 2.0.0
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
-      acorn: 8.14.1
-      acorn-import-attributes: 1.9.5(acorn@8.14.1)
-      async-sema: 3.1.1
-      bindings: 1.5.0
-      estree-walker: 2.0.2
-      glob: 10.4.5
-      graceful-fs: 4.2.11
-      node-gyp-build: 4.8.4
-      picomatch: 4.0.2
       resolve-from: 5.0.0
     transitivePeerDependencies:
       - encoding
@@ -3215,11 +3036,6 @@ packages:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: false
 
-  /abbrev@3.0.1:
-    resolution: {integrity: sha512-AO2ac6pjRB3SJmGJo+v5/aK6Omggp6fsLrs6wN9bd35ulu4cCwaAU9+7ZhXjeqHVkaHThLuzH0nZr0YpCDhygg==}
-    engines: {node: ^18.17.0 || >=20.5.0}
-    dev: false
-
   /abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
     engines: {node: '>=6.5'}
@@ -3254,11 +3070,6 @@ packages:
       debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /agent-base@7.1.3:
-    resolution: {integrity: sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==}
-    engines: {node: '>= 14'}
     dev: false
 
   /ajv@6.12.6:
@@ -3415,7 +3226,6 @@ packages:
 
   /bare-events@2.5.4:
     resolution: {integrity: sha512-+gFfDkR8pj4/TrWCGUGWmJIkBwuxPS5F+a5yWjOHQt2hHvNZd5YLzadjmDUtFmMM4y429bnKLa8bYBMHcYdnQA==}
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -3601,11 +3411,6 @@ packages:
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
-    dev: false
-
-  /chownr@3.0.0:
-    resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
-    engines: {node: '>=18'}
     dev: false
 
   /ci-info@4.2.0:
@@ -4371,7 +4176,6 @@ packages:
     resolution: {integrity: sha512-ceqxoedUrcayh7Y7ZX6NdbbDzGROiyVBgC4PriJThBKSVPWnnFHZAkfI1lJT8QFkOwH4qOS2SJkS4wvpGl8BpA==}
     engines: {node: '>=12'}
     hasBin: true
-    requiresBuild: true
     optionalDependencies:
       '@esbuild/android-arm': 0.18.20
       '@esbuild/android-arm64': 0.18.20
@@ -4401,7 +4205,6 @@ packages:
     resolution: {integrity: sha512-HJ96Hev2hX/6i5cDVwcqiJBBtuo9+FeIJOtZ9W1kA5M6AMJRHUZlpYZ1/SbEwtO0ioNAW8rUooVpC/WehY2SfA==}
     engines: {node: '>=12'}
     hasBin: true
-    requiresBuild: true
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.19.11
       '@esbuild/android-arm': 0.19.11
@@ -4431,7 +4234,6 @@ packages:
     resolution: {integrity: sha512-qKA6Pvai73+M2FtftpNKRxJ78GIjmFXFxd/1DVBqGo/qNhLSfv+G12n9pNoWdytJC8U00TrViOwpjT0zgqQS8Q==}
     engines: {node: '>=18'}
     hasBin: true
-    requiresBuild: true
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.25.3
       '@esbuild/android-arm': 0.25.3
@@ -5207,7 +5009,6 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -5538,16 +5339,6 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       agent-base: 6.0.2
-      debug: 4.4.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /https-proxy-agent@7.0.6:
-    resolution: {integrity: sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==}
-    engines: {node: '>= 14'}
-    dependencies:
-      agent-base: 7.1.3
       debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
@@ -6667,25 +6458,12 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /minizlib@3.0.2:
-    resolution: {integrity: sha512-oG62iEk+CYt5Xj2YqI5Xi9xWUeZhDI8jjQmC5oThVH5JGCTgIjr7ciJDzC7MBzYd//WvR1OTmP5Q38Q8ShQtVA==}
-    engines: {node: '>= 18'}
-    dependencies:
-      minipass: 7.1.2
-    dev: false
-
   /mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
     dev: false
 
   /mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dev: false
-
-  /mkdirp@3.0.1:
-    resolution: {integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==}
     engines: {node: '>=10'}
     hasBin: true
     dev: false
@@ -6789,7 +6567,7 @@ packages:
       '@rollup/plugin-node-resolve': 16.0.1(rollup@4.40.1)
       '@rollup/plugin-replace': 6.0.2(rollup@4.40.1)
       '@rollup/plugin-terser': 0.4.4(rollup@4.40.1)
-      '@vercel/nft': 0.29.2(rollup@4.40.1)
+      '@vercel/nft': 0.27.7(rollup@4.40.1)
       archiver: 7.0.1
       c12: 3.0.3(magicast@0.3.5)
       chokidar: 4.0.3
@@ -6944,14 +6722,6 @@ packages:
     hasBin: true
     dependencies:
       abbrev: 1.1.1
-    dev: false
-
-  /nopt@8.1.0:
-    resolution: {integrity: sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==}
-    engines: {node: ^18.17.0 || >=20.5.0}
-    hasBin: true
-    dependencies:
-      abbrev: 3.0.1
     dev: false
 
   /normalize-package-data@6.0.2:
@@ -8584,18 +8354,6 @@ packages:
       yallist: 4.0.0
     dev: false
 
-  /tar@7.4.3:
-    resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
-    engines: {node: '>=18'}
-    dependencies:
-      '@isaacs/fs-minipass': 4.0.1
-      chownr: 3.0.0
-      minipass: 7.1.2
-      minizlib: 3.0.2
-      mkdirp: 3.0.1
-      yallist: 5.0.0
-    dev: false
-
   /terser@5.39.0:
     resolution: {integrity: sha512-LBAhFyLho16harJoWMg/nZsQYgTrg5jXOn2nCYjRUcZZEdE3qa2zb8QEDRUGVZBW4rlazf2fxkg8tztybTaqWw==}
     engines: {node: '>=10'}
@@ -8744,7 +8502,6 @@ packages:
 
   /undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
-    requiresBuild: true
     dev: false
     optional: true
 
@@ -8902,7 +8659,6 @@ packages:
 
   /unrs-resolver@1.7.2:
     resolution: {integrity: sha512-BBKpaylOW8KbHsu378Zky/dGh4ckT/4NW/0SHRABdqRLcQJ2dAOjDo9g97p04sWflm0kqPqpUatxReNV/dqI5A==}
-    requiresBuild: true
     dependencies:
       napi-postinstall: 0.2.3
     optionalDependencies:
@@ -9461,11 +9217,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: false
-
-  /yallist@5.0.0:
-    resolution: {integrity: sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==}
-    engines: {node: '>=18'}
     dev: false
 
   /yaml-eslint-parser@1.3.0:
