@@ -15,7 +15,7 @@ export default withNuxt(antFu({
     semi: true,
     quotes: "double",
   },
-  ignores: [".pnpm-store/**", "**/migrations/*"],
+  ignores: [".pnpm-store/**", "**/migrations/*", ".github/**/*", ".husky/**/*"],
 }, {
   rules: {
     "vue/max-attributes-per-line": ["error", {
