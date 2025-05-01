@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.6.12+sha256.3ed40ffc6cbb00790ab325e9d3ff5517a3ed5b763ec53a411707b1702a411174",
+  "packageManager": "pnpm@8.6.12",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
