@@ -3,6 +3,8 @@ import type { ZodObject, ZodRawShape } from "zod";
 
 import { ZodError } from "zod";
 
+import { logger } from "./logger";
+
 export default function tryParseEnv<T extends ZodRawShape>(
   EnvSchema: ZodObject<T>,
   buildEnv: Record<string, string | undefined> = process.env,
@@ -21,7 +23,7 @@ export default function tryParseEnv<T extends ZodRawShape>(
       throw e;
     }
     else {
-      console.error(error);
+      logger.error(error);
     }
   }
 }

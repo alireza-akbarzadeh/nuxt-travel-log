@@ -13,6 +13,8 @@ node_modules
 logs
 *.log
 
+local.db*
+
 # Misc
 .DS_Store
 .fleet
