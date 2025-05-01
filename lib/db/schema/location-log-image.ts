@@ -1,6 +1,7 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-import { locationLog } from "~/lib/db/schema/location-log";
+import { user } from "./auth";
+import { locationLog } from "./location-log";
 
 export const locationLogImage = sqliteTable("locationLogImage", {
 
@@ -8,6 +9,7 @@ export const locationLogImage = sqliteTable("locationLogImage", {
   key: text().notNull(),
   description: text(),
   locationLogId: int().notNull().references(() => locationLog.id),
+  userId: int().notNull().references(() => user.id),
   created_at: int().notNull().$default(() => Date.now()),
   updated_at: int().notNull().$default(() => Date.now()).$onUpdate(() => Date.now()),
 });

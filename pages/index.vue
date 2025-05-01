@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+import AuthButton from "~/components/auth-button.vue";
+</script>
+
 <template>
   <div class="hero bg-base-300 container mx-auto mt-4">
     <div class="hero-content min-h-96 text-center">
@@ -9,9 +13,7 @@
           Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
           quasi. In deleniti eaque aut repudiandae et a id nisi.
         </p>
-        <button class="btn btn-accent">
-          Sign In With Github <icon name="tabler:brand-github" size="24" />
-        </button>
+        <AuthButton />
       </div>
     </div>
   </div>
