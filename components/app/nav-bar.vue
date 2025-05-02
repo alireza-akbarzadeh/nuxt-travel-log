@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-primary text-primary-content">
     <div class="navbar-start">
-      <NuxtLink class="btn btn-ghost text-xl" tp="/">
+      <NuxtLink class="btn btn-ghost text-xl" to="/">
         Travel log
       </NuxtLink>
     </div>

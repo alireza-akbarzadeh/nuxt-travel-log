@@ -1,18 +1,25 @@
-import { createAuthClient } from "better-auth/client";
+import { createAuthClient } from "better-auth/vue";
 import { defineStore } from "pinia";
 
 const authClient = createAuthClient();
 
 export const useAuthStore = defineStore("authStore", () => {
-  const loading = ref<boolean>(false);
+  const session = authClient.useSession();
+  const user = computed(() => session.value.data?.user);
+  const loading = computed(() => session.value?.isPending);
+
   async function signIn() {
-    loading.value = true;
     await authClient.signIn.social({
       provider: "github",
       callbackURL: "/dashboard",
       errorCallbackURL: "/error",
     });
-    loading.value = false;
   }
-  return { signIn, loading };
+
+  async function signOut() {
+    await authClient.signOut();
+    navigateTo("/");
+  }
+
+  return { signIn, signOut, loading, user };
 });
