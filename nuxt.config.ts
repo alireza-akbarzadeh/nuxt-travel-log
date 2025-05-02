@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode", "@pinia/nuxt", "nuxt-csurf"],
+  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode", "@pinia/nuxt", "nuxt-csurf", "@vee-validate/nuxt"],
   css: ["~/assets/css/main.css"],
   eslint: {
     config: {

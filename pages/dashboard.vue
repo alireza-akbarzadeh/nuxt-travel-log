@@ -19,7 +19,7 @@ function toggleSidebar() {
     >
       <div
         :class="{ 'justify-center': !isSidebar, 'justify-end': isSidebar }"
-        class="flex pt-2 hover:cursor-pointer hover:bg-base-200"
+        class="flex pt-2 pl-4 hover:cursor-pointer hover:bg-base-200"
         @click="toggleSidebar"
       >
         <Icon
@@ -42,7 +42,7 @@ function toggleSidebar() {
         />
         <SidebarButton
           :show-label="isSidebar"
-          href="/dashboard/add-location"
+          href="/dashboard/add"
           icon="tabler:circle-plus-filled"
           label="Add location"
         />
@@ -55,6 +55,8 @@ function toggleSidebar() {
         />
       </div>
     </div>
-    <div class="flex-1" />
+    <div class="flex-1">
+      <NuxtPage />
+    </div>
   </aside>
 </template>
