@@ -1,25 +1,48 @@
 import { createAuthClient } from "better-auth/vue";
-import { defineStore } from "pinia";
 
 const authClient = createAuthClient();
 
-export const useAuthStore = defineStore("authStore", () => {
-  const session = authClient.useSession();
-  const user = computed(() => session.value.data?.user);
+export const useAuthStore = defineStore("useAuthStore", () => {
+  const session = ref<Awaited<ReturnType<typeof authClient.useSession>> | null>(null);
+
+  async function init() {
+    session.value = await authClient.useSession(useFetch);
+  }
+
+  const user = computed(() => session.value?.data?.user);
   const loading = computed(() => session.value?.isPending);
 
   async function signIn() {
+    const { csrf } = useCsrf();
+    const headers = new Headers();
+    headers.append("csrf-token", csrf);
     await authClient.signIn.social({
       provider: "github",
       callbackURL: "/dashboard",
       errorCallbackURL: "/error",
+      fetchOptions: {
+        headers,
+      },
     });
   }
 
   async function signOut() {
-    await authClient.signOut();
+    const { csrf } = useCsrf();
+    const headers = new Headers();
+    headers.append("csrf-token", csrf);
+    await authClient.signOut({
+      fetchOptions: {
+        headers,
+      },
+    });
     navigateTo("/");
   }
 
-  return { signIn, signOut, loading, user };
+  return {
+    init,
+    loading,
+    signIn,
+    signOut,
+    user,
+  };
 });
